@@ -19,15 +19,15 @@ Vagrant.configure("2") do |config|
 			v.cpus = 2
 		end
 		master.vm.provision "shell", inline: "ip --br a"		
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/apt_upgrade.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/checkPkg.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/apply_k8s_modules.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/mod_sysctl_params.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/install_packages.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/config_cri.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/mod_fw.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/master_init.sh"
-		master.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/cluster_init.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/apt_upgrade.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/checkPkg.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/apply_k8s_modules.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/mod_sysctl_params.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/install_packages.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/config_cri.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/mod_fw.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/master_init.sh"
+		master.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/cluster_init.sh"
 	end
 	
 	N = 2
@@ -47,15 +47,15 @@ Vagrant.configure("2") do |config|
 				v.cpus = 1
 			end
 			slave.vm.provision "shell", inline: "ip --br a"		
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/apt_upgrade.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/checkPkg.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/apply_k8s_modules.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/mod_sysctl_params.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/install_packages.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/config_cri.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/mod_fw.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/worker_init.sh"
-			slave.vm.provision "shell", path: "https://github.com/8bawi/kuberant/blob/59ea1c6ac07e8e8c0dae4e31c1db25e7e9b092d6/lib/worker_join.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/apt_upgrade.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/checkPkg.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/apply_k8s_modules.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/mod_sysctl_params.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/install_packages.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/config_cri.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/mod_fw.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/worker_init.sh"
+			slave.vm.provision "shell", path: "https://raw.githubusercontent.com/8bawi/kuberant/main/lib/worker_join.sh"
 			
 		end
 	end  
