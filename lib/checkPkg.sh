@@ -1,5 +1,15 @@
 #!/bin/bash
 
+DIR=/vagrant/lib
+if [ -d "$DIR" ];
+then
+    	echo "$DIR directory exists."
+else
+	echo "$DIR directory does not exist."
+ 	mkdir $DIR
+  	echo "$DIR directory Created."
+fi
+
 FILE1=/vagrant/lib/cni-plugins-linux-amd64-v1.1.1.tgz
 FILE2=/vagrant/lib/containerd-1.6.8-linux-amd64.tar.gz
 FILE3=/vagrant/lib/runc.amd64
